@@ -7,8 +7,8 @@ import { Switch } from '@headlessui/react'
 // import logo from "/main_icon.png"
 const navigation = [
   { name: 'Home', href: '#home', current: true },
-  { name: 'About', href: '#about', current: false },
-  { name: 'Projects', href: '#project', current: false },
+  { name: 'About Me', href: '#about', current: false },
+  { name: 'Projects', href: '#projects', current: false },
   { name: 'Contact', href: '#contact', current: false },
 ]
 
