@@ -1,6 +1,6 @@
 
 export default function About() {
-    const backImg = "https://raw.githubusercontent.com/zews78/zews.in/master/public/profile_img.jpg?token=ANLZMGQGEFKVIJVLPBYFILDBTTT3Y";
+    const backImg = "https://raw.githubusercontent.com/zews78/zews.in/master/public/profile_img.jpg?token=ANLZMGXRE3U37PAYCQI6LTLBUZ3JK";
     return (
         <div id="about" class="h-screen bg-purple-500"><br />
             <div class="p-2 lg:mx-8 text-yellow-400 lg:text-xl font-bold">About Me.</div>

@@ -8,8 +8,7 @@ function individualProject(i) {
             <div class="p-2 lg:mx-8 text-yellow-400 lg:text-xl font-bold">My Projects.</div>
             <div class="px-8 mr-5 lg:ml-40 font-bold">{i}. {data[i - 1].title}</div>
             <div class="px-8 lg:mr-10 lg:ml-40 my-2 md:flex h-1/3 md:h-3/5">
-                <div class="m-3 md:w-3/5 bg-gray-400 h-2/3 md:h-full">
-                    img here
+                <div class="m-3 md:w-3/5 bg-top bg-contain bg-no-repeat h-2/3 md:h-full " style={{backgroundImage: `url(${data[i-1].image})`}}>
                 </div>
                 <div class="p-2 m-2 about md:w-2/5">
                     {data[i - 1].description.map((desc) => (
