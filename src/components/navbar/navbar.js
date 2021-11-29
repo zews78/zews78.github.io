@@ -1,8 +1,11 @@
 // import { Fragment } from 'react'
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Switch } from '@headlessui/react'
+import { useContext } from 'react'
+import themeContext from '../../context/themeContext'
+// import themeState from '../../context/themeState'
 
 // import logo from "/main_icon.png"
 const navigation = [
@@ -18,10 +21,28 @@ function classNames(...classes) {
 
 
 // toggle button for dark mode
-function Toggle() {
-  const [enabled, setEnabled] = useState(false)
+// module.export = {
+//   darkModee: ""
+// } 
+// function changeVal(){}
 
+// console.log(a,"here at the top")
+var darkModee= "";
+
+var checkEnable = false;
+
+
+function Toggle() {
+  const a = useContext(themeContext);
+  console.log(a.mode, "navbart_galsj")
+  const [enabled, setEnabled] = useState(false)
+  checkEnable = enabled;
+  enabled ? a.setmode("dark") : a.setmode("light"); 
+  // console.log(darkModee, "navbar");
+  // useEffect(changeVal());
   return (
+    <>
+
     <Switch
       checked={enabled}
       onChange={setEnabled}
@@ -34,6 +55,7 @@ function Toggle() {
           }  py-2 pointer-events-none inline-block h-6 w-6 transform bg-white rounded-full shadow-lg transition ease-in-out duration-200`}
       />
     </Switch>
+    </>
   )
 }
 
@@ -41,7 +63,7 @@ function Toggle() {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-gray-800 dark:bg-white">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
