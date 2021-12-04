@@ -1,7 +1,7 @@
 // import { Fragment } from 'react'
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Switch } from '@headlessui/react'
 import { useContext } from 'react'
 import themeContext from '../../context/themeContext'
@@ -20,26 +20,15 @@ function classNames(...classes) {
 }
 
 
-// toggle button for dark mode
-// module.export = {
-//   darkModee: ""
-// } 
-// function changeVal(){}
 
-// console.log(a,"here at the top")
-var darkModee= "";
-
-var checkEnable = false;
 
 
 function Toggle() {
   const a = useContext(themeContext);
-  console.log(a.mode, "navbart_galsj")
+  // console.log(a.mode, "navbart_galsj")
   const [enabled, setEnabled] = useState(false)
-  checkEnable = enabled;
   enabled ? a.setmode("dark") : a.setmode("light"); 
-  // console.log(darkModee, "navbar");
-  // useEffect(changeVal());
+
   return (
     <>
 
@@ -63,11 +52,11 @@ function Toggle() {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-gray-800 dark:bg-white">
+    <Disclosure as="nav" className="bg-white dark:bg-gray-800">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-            <div className="relative flex items-center justify-between h-16">
+            <div className="relative flex items-center justify-between h-14">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -83,18 +72,23 @@ export default function Navbar() {
                 <div className="flex-shrink-0 flex items-center">
                   <img
                     className="block lg:hidden h-8 w-auto"
-                    src="/title_text2.png"
+                    src="/header_icon.png"
                     alt="Workflow"
                   />
+                  <div class="flex self-center cursor-pointer">
                   <img
-                    className="hidden lg:block h-8 w-auto"
-                    src="/main_icon2.png"
+                    className="hidden lg:block h-6 w-auto self-center"
+                    src="/header_icon.png"
                     alt="Workflow"
                   />
+                  <div class="hidden lg:block font-extrabold text-3xl ml-4 dark:text-white" style={{lineHeight:"64%"}}>zews</div>
+
+                  </div>
+
 
                 </div>
                 {/* fix here by defining different classname */}
-                <div className="hidden sm:block sm:ml-6" style={{marginLeft:"40rem"}}>
+                <div className="hidden sm:block sm:ml-6 lg:ml-1/2" style={{marginLeft:"50%"}}>
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <a

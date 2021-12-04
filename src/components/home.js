@@ -2,7 +2,7 @@
 
 export default function Home() {
     return (
-        <div id="home" class="bg-yellow-500 h-screen dark:bg-green-500"><br />
+        <div id="home" class="h-screen bg-gray-100 dark:text-yellow-500 dark:bg-gray-900"><br />
             <div class="px-8 lg:mx-40 my-40">
                 {/* <div class="semicircle"></div>
                 <div class="cyclender"></div> */}
