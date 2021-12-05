@@ -1,0 +1,55 @@
+.path {
+    transform: translateY(-3vh);
+    /* overflow: hidden; */
+    /* position: absolute; */
+    /* bottom: 0.5rem; */
+    /* stroke: black; */
+    stroke-width: 3px;
+    fill: rgba(243, 244, 246, 0);
+    stroke-dasharray: 1400;
+    stroke-dashoffset: 100;
+    animation: dash 5s linear alternate;
+    animation-delay: 0.3s;
+  }
+  .move{
+    transform: translateY(-80vh);
+}
+  @media screen and (max-width: 700px) {
+    .path-move {
+        transform: translateY(43vh);
+    }
+    .move{
+        transform: translateY(-10vh);
+    }
+  }
+  @media (min-width:700px) and (max-width: 1000px) {
+    .path-move {
+        transform: translateY(13vh);
+    }
+    .move{
+        transform: translateY(-50vh);
+    }
+  }
+
+  .path2 {
+    /* overflow: hidden; */
+    /* position: absolute; */
+    /* bottom: 0.5rem; */
+    /* stroke: black;
+    stroke-width: 3px; */
+    fill: yellow;
+    /* stroke-dasharray: 1400;
+    stroke-dashoffset: 100;
+    animation: dash 5s linear alternate;
+    animation-delay: 0.3s; */
+  }
+
+  
+  @keyframes dash {
+    from {
+      stroke-dashoffset: 1500;
+    }
+    to {
+      stroke-dashoffset: 100;
+    }
+  }
