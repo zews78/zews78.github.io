@@ -17,14 +17,20 @@ function App() {
   // })
   return (
 
-    <div class={a.mode}>
+      // <div class="m-0 p-0 container">
+    <div class={a.mode +" containers"}>
       <Navbar />
-      <Home />
-      <About />
-      <Projects />
-      <Projects2 />
-      <Projects3 />
-      <Contact />
+      <section class="child"><Home /></section>
+      <section class="child"><About /></section>
+
+    <section class="projCont">
+      <section class="child"><Projects /></section>
+      <section class="child"><Projects2 /></section>
+      <section class="child"><Projects3 /></section>
+    </section>
+    <section class="child"><Contact /></section>
+
+      {/* </div> */}
       {/* <Learn /> */}
     </div>
 

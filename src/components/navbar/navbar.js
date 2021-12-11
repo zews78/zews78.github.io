@@ -1,4 +1,5 @@
 // import { Fragment } from 'react'
+// import {useParams} from "react-router-dom"
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { useState } from 'react'
@@ -6,7 +7,7 @@ import { Switch } from '@headlessui/react'
 import { useContext } from 'react'
 import themeContext from '../../context/themeContext'
 // import themeState from '../../context/themeState'
-
+import "./navbar.css";
 // import logo from "/main_icon.png"
 const navigation = [
   { name: 'Home', href: '#home', current: true },
@@ -14,6 +15,10 @@ const navigation = [
   { name: 'Projects', href: '#projects', current: false },
   { name: 'Contact', href: '#contact', current: false },
 ]
+// const { userparams } = useParams();
+// const queryString = window.location.search;
+
+// console.log(userparams);
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -52,7 +57,7 @@ function Toggle() {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-white dark:bg-gray-800">
+    <Disclosure as="nav" className="bg-white sticky top-0 z-10 dark:bg-gray-800">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -88,7 +93,7 @@ export default function Navbar() {
 
                 </div>
                 {/* fix here by defining different classname */}
-                <div className="hidden sm:block sm:ml-6 lg:ml-1/2" style={{marginLeft:"50%"}}>
+                <div className="hidden sm:block sm:ml-6 lg:ml-1/2 navbarItems">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <a
@@ -101,6 +106,7 @@ export default function Navbar() {
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
+                        
                       </a>
                     ))}
                     {/* dark/light mode toggle */}
@@ -135,6 +141,7 @@ export default function Navbar() {
                   {item.name}
                 </Disclosure.Button>
               ))}
+              {/* <div class="px-3 py-2">{Toggle()}</div> */}
             </div>
           </Disclosure.Panel>
         </>

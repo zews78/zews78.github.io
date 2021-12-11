@@ -5,10 +5,11 @@ import { data } from "../data"
 function individualProject(i) {
     return (
         <div id="projects" class="h-screen bg-gray-100"><br />
-            <div class="p-2 lg:mx-8 text-yellow-400 lg:text-xl font-bold">My Projects.</div>
+        <div class="mt-12">
+        <div class="p-2 lg:mx-8 text-yellow-400 lg:text-xl font-bold">My Projects.</div>
             <div class="px-8 mr-5 lg:ml-40 font-bold">{i}. {data[i - 1].title}</div>
             <div class="px-8 lg:mr-10 lg:ml-40 my-2 md:flex h-1/3 md:h-3/5">
-                <div class="m-3 md:w-3/5 bg-top bg-contain bg-no-repeat h-2/3 md:h-full " style={{backgroundImage: `url(${data[i-1].image})`}}>
+                <div class="m-3 bg-gray-500 md:w-3/5 bg-top bg-contain bg-no-repeat h-2/3 md:h-full " style={{backgroundImage: `url(${data[i-1].image})`}}>
                 </div>
                 <div class="p-2 m-2 about md:w-2/5">
                     {data[i - 1].description.map((desc) => (
@@ -31,6 +32,8 @@ function individualProject(i) {
 
 
             </div>
+        </div>
+
 
         </div>
     )
