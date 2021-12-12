@@ -3,7 +3,7 @@
 import { useState } from 'react'
 // import { Switch } from '@headlessui/react'
 import React from 'react';
-import { Chart } from 'react-charts'
+// import { Chart } from 'react-charts'
  
 // type MyDatum = { date: Date, stars: number }
 function MyChart() {
@@ -20,13 +20,13 @@ function MyChart() {
     ],
     []
   )
-  const axes = React.useMemo(
-    () => [
-      { primary: true, type: 'linear', position: 'bottom' },
-      { type: 'linear', position: 'left' }
-    ],
-    []
-  )
+  // const axes = React.useMemo(
+  //   () => [
+  //     { primary: true, type: 'linear', position: 'bottom' },
+  //     { type: 'linear', position: 'left' }
+  //   ],
+  //   []
+  // )
   // const primaryAxis = React.useMemo<
   //   AxisOptions<typeof data[number]["data"][number]>
   // >(
@@ -63,7 +63,7 @@ function MyChart() {
       }}
     /> */}
     <div>hello</div>
-    <Chart data={data} axes={axes} />
+    {/* <Chart data={data} axes={axes} /> */}
     </div>
   )
 }
