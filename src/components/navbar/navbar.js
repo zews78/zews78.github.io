@@ -31,7 +31,7 @@ function classNames(...classes) {
 function Toggle() {
   const a = useContext(themeContext);
   // console.log(a.mode, "navbart_galsj")
-  const [enabled, setEnabled] = useState(false)
+  const [enabled, setEnabled] = useState(true)
   enabled ? a.setmode("dark") : a.setmode("light"); 
 
   return (

@@ -18,7 +18,7 @@ export default function Contact() {
 
         <div class="text-xl md:text-3xl">Let's Talk!</div>
         <br></br>
-        <div class="md:w-3/5 tracking-wider leading-relaxed">Feel free to reach out if you want to build something together, have question, share your thoughts or just want to connect.</div>
+        <div class="text-sm md:text-base md:w-3/5 tracking-wider leading-relaxed">Feel free to reach out if you want to build something together, have question, share your thoughts or just want to connect.</div>
         <div><br></br></div>
         <a href="mailto:shariquealam52@gmail.com"><button type="button" class="lg:text-lg text-sm bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Ping me</button></a>
         <div><br></br></div>
@@ -55,9 +55,9 @@ export default function Contact() {
         </svg>
       </div> */}
 
-      <div class="text-center text-sm w-full absolute bottom-2 dark:text-white">
-        <p>Made with <span class="text-base">♥️</span> by Sharique Alam</p>
-        <p>Copyright © {year} zews</p>
+      <div class="text-center text-xs md:text-sm w-full absolute bottom-2 dark:text-white hover:text-gray-800">
+        <div>Made with <span class="text-base">♥️</span> by Sharique Alam</div>
+        <div>Copyright © {year} zews</div>
       </div>
 
     </div>

@@ -4,7 +4,7 @@ export const data =[
         description: ["A platform for connecting buyers with sellers.",
         "The web-application contains admin panel with full admin control."],
         tech_stack: ["JavaScript", "NodeJs", "Firebase", "Bootstrap","Razorpay gateway"],
-        image: "https://raw.githubusercontent.com/zews78/zews.in/master/public/images/factorydukaan_landing.png?token=ANLZMGT5KT4H42NLBZEXU3LBVY4NQ",
+        image: "https://raw.githubusercontent.com/zews78/zews.in/master/public/images/factorydukaan_landing.png",
         link: "https://factorydukaan.com/"
     },
     {
@@ -21,7 +21,7 @@ export const data =[
         description: ["An web app that provides latest information related to COVID’19.",
         "Used Postman api to fetch real-time data"],
         tech_stack: ["EJS", "NodeJs", "Postman API"],
-        image: "https://raw.githubusercontent.com/zews78/zews.in/main/public/images/india.png?token=ANLZMGTTLG5PMVI52GPPFFDBVY4DK",
+        image: "https://raw.githubusercontent.com/zews78/zews.in/master/public/images/india.png",
         link: "https://covid-tracker.glitch.me/"
     }
 ]

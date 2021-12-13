@@ -1,5 +1,5 @@
 .path {
-    transform: translateY(-6vh);
+    transform: translateY(-4vh);
     /* overflow: hidden; */
     /* position: absolute; */
     /* bottom: 0.5rem; */
@@ -12,7 +12,7 @@
     animation-delay: 0.3s;
   }
   .move{
-    transform: translateY(-80vh);
+    transform: translateY(-75vh);
 }
 .path2{
   transform: translateY(-37vh);
@@ -30,7 +30,19 @@
 .path-move2{
   overflow-y: hidden;
 }
-  @media screen and (max-width: 700px) {
+@media screen and (max-width: 499px) {
+  .path-move {
+      transform: translateY(48vh);
+  }
+  .path2{
+    transform: translateY(-20vh);
+  
+    }
+  .move{
+      transform: translateY(0vh);
+  }
+}
+@media (min-width:500px) and (max-width: 700px) {
     .path-move {
         transform: translateY(43vh);
     }
@@ -39,19 +51,19 @@
     
       }
     .move{
-        transform: translateY(-10vh);
+        transform: translateY(-15vh);
     }
   }
-  @media (min-width:700px) and (max-width: 1000px) {
+  @media (min-width:700px) and (max-width: 1050px) {
     .path-move {
-        transform: translateY(13vh);
+        transform: translateY(15vh);
     }
     .path2{
       transform: translateY(-36vh);
     
       }
     .move{
-        transform: translateY(-50vh);
+        transform: translateY(-40vh);
     }
   }
 
