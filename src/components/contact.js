@@ -11,7 +11,7 @@ export default function Contact() {
   let date = new Date();
   let year = date.getFullYear();
   return (
-    <div id="contact" class="h-screen relative dark:bg-gray-900 overflow-hidden"><br /><br /><br/>
+    <div id="contact" class="h-screen overflow-x-hidden relative dark:bg-gray-900 overflow-hidden"><br /><br /><br/>
 
       <div class="p-2 lg:mx-8 text-yellow-400 lg:text-xl font-bold">Contact.</div>
       <div class="px-8 lg:mx-40 my-2 dark:text-white">

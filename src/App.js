@@ -4,7 +4,7 @@ import Navbar from './components/navbar/navbar';
 import Learn from './components/homeLearn';
 import Home from './components/home';
 import About from './components/about';
-import Projects, { Projects2, Projects3 } from './components/projects';
+import Projects, { Projects2, Projects3, Projects4 } from './components/projects';
 import Contact from './components/contact';
 import { useContext } from 'react/cjs/react.development';
 import themeContext from './context/themeContext';
@@ -27,6 +27,7 @@ function App() {
       <section class="child"><Projects /></section>
       <section class="child"><Projects2 /></section>
       <section class="child"><Projects3 /></section>
+      <section class="child"><Projects4 /></section>
     </section>
     <section class="child"><Contact /></section>
 
