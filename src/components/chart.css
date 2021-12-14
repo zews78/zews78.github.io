@@ -12,7 +12,8 @@
     animation-delay: 0.3s;
   }
   .move{
-    transform: translateY(-75vh);
+    margin-top: 20px;
+    transform: translateY(-80vh);
 }
 .path2{
   transform: translateY(-37vh);

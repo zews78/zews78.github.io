@@ -26,7 +26,7 @@ export const data =[
     },
     {
         title: "RC Plane",
-        description: ["Handcrafted the design NACA-3412 airfoil using styrofoam.",
+        description: ["Handcrafted the design NACA-3412 airfoil on styrofoam.",
         "Won first prize at High Sky event at Techspardha'19" ],
         tech_stack: ["Aeromodynamics", "Engineering", "XFLRv5"],
         image: "https://raw.githubusercontent.com/zews78/zews.in/main/public/images/highsky.jpg",

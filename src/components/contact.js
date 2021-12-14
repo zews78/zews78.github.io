@@ -1,3 +1,6 @@
+import {useEffect, useState} from "react"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { FaLinkedinIn } from 'react-icons/fa';
 import {
   AiFillGithub,
@@ -6,15 +9,36 @@ import {
 } from "react-icons/ai";
 import "./chart.css";
 
+const useViewport = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleWindowResize);
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
+
+  // Return the width so we can use it in our components
+  return { width };
+}
 
 export default function Contact() {
   let date = new Date();
   let year = date.getFullYear();
+  const { width } = useViewport();
+  // const width = 700;
+  const breakpoint = 520;
+  useEffect(() => {
+      AOS.init({
+          duration: 1000
+      });
+
+  }, [])
   return (
     <div id="contact" class="h-screen overflow-x-hidden relative dark:bg-gray-900 overflow-hidden"><br /><br /><br/>
 
       <div class="p-2 lg:mx-8 text-yellow-400 lg:text-xl font-bold">Contact.</div>
-      <div class="px-8 lg:mx-40 my-2 dark:text-white">
+      <div data-aos={`${(width>breakpoint)? "fade-up" : ""}`} class="px-8 lg:mx-40 my-2 dark:text-white">
 
         <div class="text-xl md:text-3xl">Let's Talk!</div>
         <br></br>

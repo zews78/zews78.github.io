@@ -1,17 +1,43 @@
 
 // import {  } from '@heroicons/react/'
+import {useEffect, useState} from "react"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { data } from "../data"
 
-function individualProject(i) {
+const useViewport = () => {
+    const [width, setWidth] = useState(window.innerWidth);
+  
+    useEffect(() => {
+      const handleWindowResize = () => setWidth(window.innerWidth);
+      window.addEventListener("resize", handleWindowResize);
+      return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
+  
+    // Return the width so we can use it in our components
+    return { width };
+  }
+
+function IndividualProject(i) {
+    const { width } = useViewport();
+    // const width = 700;
+    const breakpoint = 520;
+    useEffect(() => {
+        AOS.init({
+            duration: 1000
+        });
+
+    }, [])
+
     return (
-        <div id="projects" class="h-screen overflow-x-hidden bg-gray-100 dark:bg-gray-900"><br />
+        <div id="projects" class="h-screen overflow-x-hidden md:overflow-x-visible bg-gray-100 dark:bg-gray-900"><br />
             <div class="mt-12">
                 <div class="p-2 lg:mx-8 text-yellow-400 lg:text-xl font-bold">My Projects.</div>
                 <div class="px-8 mr-5 lg:ml-40 font-bold dark:text-white">{i}. {data[i - 1].title}</div>
                 <div class="px-8 lg:mr-10 lg:ml-40 my-2 md:flex h-1/3 md:h-3/5 dark:text-white">
                     {/* <div class="m-3 md:w-3/5 bg-top bg-contain bg-no-repeat h-2/3 md:h-full " style={{backgroundImage: `url(${data[i-1].image})`}}></div> */}
-                    <div class=" p-2 m-3 w-6/6 md:w-3/5 h-36 md:h-80 bg-top bg-contain bg-no-repeat opacity-90 hover:opacity-100" style={{ backgroundImage: `URL(${data[i - 1].image})` }}></div>
-                    <div class="p-2 text-xs md:text-base m-2 about md:w-2/5">
+                    <div data-aos={`${(width>breakpoint)? "zoom-in" : ""}`}  class=" p-2 m-3 w-6/6 md:w-3/5 h-36 md:h-80 bg-top bg-contain bg-no-repeat opacity-90 hover:opacity-100" style={{ backgroundImage: `URL(${data[i - 1].image})` }}></div>
+                    <div data-aos={`${(width>breakpoint)? "fade-up" : ""}`} class="p-2 text-xs md:text-base m-2 about md:w-2/5">
                         {data[i - 1].description.map((desc) => (
                             <p class="tracking-wider leading-relaxed">{desc}</p>
                         ))}
@@ -47,7 +73,7 @@ function individualProject(i) {
 export default function Projects() {
     return (
         <>
-            {individualProject(1)}
+            {IndividualProject(1)}
         </>
 
     )
@@ -56,7 +82,7 @@ export default function Projects() {
 export function Projects2() {
     return (
         <>
-            {individualProject(2)}
+            {IndividualProject(2)}
         </>
     )
 }
@@ -64,7 +90,7 @@ export function Projects2() {
 export function Projects3() {
     return (
         <>
-            {individualProject(3)}
+            {IndividualProject(3)}
         </>
     )
 }
@@ -72,7 +98,7 @@ export function Projects3() {
 export function Projects4() {
     return (
         <>
-            {individualProject(4)}
+            {IndividualProject(4)}
 
 
         </>

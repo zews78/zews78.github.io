@@ -4,6 +4,7 @@
     /* font-family: 'Montserrat','serif'; */
 
 }
+@media screen and (max-width: 500px) {
 .containers{
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
@@ -16,4 +17,5 @@
 } */
 .child{
     scroll-snap-align: start;
+}
 }
