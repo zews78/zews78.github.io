@@ -1,14 +1,14 @@
 // import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/navbar/navbar';
-import Learn from './components/homeLearn';
+// import Learn from './components/homeLearn';
 import Home from './components/home';
 import About from './components/about';
 import Projects, { Projects2, Projects3, Projects4 } from './components/projects';
 import Contact from './components/contact';
 import { useContext } from 'react/cjs/react.development';
 import themeContext from './context/themeContext';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 function App() {
   const a = useContext(themeContext);

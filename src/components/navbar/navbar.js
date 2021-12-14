@@ -77,13 +77,13 @@ export default function Navbar() {
                 <div className="flex-shrink-0 flex items-center">
                   <img
                     className="block lg:hidden h-8 w-auto"
-                    src="/header_icon.png"
+                    src="https://raw.githubusercontent.com/zews78/zews.in/main/public/header_icon.png"
                     alt="Workflow"
                   />
                   <div class="flex self-center cursor-pointer">
                   <img
                     className="hidden lg:block h-6 w-auto self-center"
-                    src="/header_icon.png"
+                    src="https://raw.githubusercontent.com/zews78/zews.in/main/public/header_icon.png"
                     alt="Workflow"
                   />
                   <div class="hidden lg:block font-extrabold text-3xl ml-4 dark:text-white" style={{lineHeight:"64%"}}>zews</div>
