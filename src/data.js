@@ -13,7 +13,7 @@ export const data =[
         "It was specially designed for queue management for COVID vaccination.",
         "The platform is as simple as booking a movie ticket"],
         tech_stack: ["JavaScript","EJS", "NodeJs", "Firebase", "Bootstrap"],
-        image: "https://raw.githubusercontent.com/zews78/zews.in/main/public/images/excelerentum2.png",
+        image: "https://raw.githubusercontent.com/zews78/zews.in/recovery/public/images/excelerentum2.png",
         link: "https://github.com/NikhilRattaNITKKR/Excalibur"
     },
     {
@@ -29,7 +29,7 @@ export const data =[
         description: ["Handcrafted the design NACA-3412 airfoil on styrofoam.",
         "Won first prize at High Sky event at Techspardha'19" ],
         tech_stack: ["Aeromodynamics", "Engineering", "XFLRv5"],
-        image: "https://raw.githubusercontent.com/zews78/zews.in/main/public/images/highsky.jpg",
+        image: "https://raw.githubusercontent.com/zews78/zews.in/recovery/public/images/highsky.jpg",
         link: "https://aeronitkkr.com/gallery.html"
     }
 ]
